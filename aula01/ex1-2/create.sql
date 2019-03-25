@@ -23,4 +23,6 @@ Create table turma_aluno (id_turma NUMBER constraint pk_turma PRIMARY KEY,id_alu
 Alter table turma_aluno add constraint fk_turma foreign key (id_turma) references turma (id_turma);
 Alter table turma_aluno add constraint fk_curso foreign key (id_curso) references curso (id_curso);
 
-Create table
+Create table aluno_curso (id_aluno NUMBER constraint pk_aluno PRIMARY KEY, id_aluno NUMBER constraint pk_aluno PRIMARY KEY, data_inicio DATE, data_fim DATE, turno varchar);
+Alter table aluno_curso add constraint fk_turma foreign key (id_turma) references turma (id_turma);
+Alter table aluno_curso add constraint fk_curso foreign key (id_curso) references curso (id_curso);
